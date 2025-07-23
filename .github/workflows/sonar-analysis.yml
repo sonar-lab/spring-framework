@@ -21,7 +21,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Build with Gradle
-        run: gradle clean build -x test
+        run: .\gradlew.bat clean build -x test
 
       - name: Run SonarQube Scanner
         run: |
@@ -29,7 +29,7 @@ jobs:
             "-Dsonar.projectKey=spring-framework" `
             "-Dsonar.projectName=40-spring-framework" `
             "-Dsonar.sources=." `
-            "-Dsonar.exclusions=**/*.md, bin" `
+            "-Dsonar.exclusions=**/*.md,bin" `
             "-Dsonar.java.binaries=**/build/classes" `
             "-Dsonar.javascript.node.maxspace=4096" `
             "-Dsonar.sourceEncoding=UTF-8" `
