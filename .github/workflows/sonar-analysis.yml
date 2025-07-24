@@ -21,7 +21,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Build with Gradle
-        run: .\gradlew.bat clean build -x test
+        run: .\gradlew.bat clean build -DskipTests
 
       - name: Run SonarQube Scanner
         run: |
